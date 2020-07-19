@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Smarthouse.DeviceList">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Устройства" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"/>
+            <Button Grid.Column="1" x:Name="adddiv" Text="добавить"></Button>
+        </Grid>
+         <CollectionView Grid.Row="1" x:Name="dvlist" SelectionMode="Single" >
+            <CollectionView.ItemTemplate>
+              <DataTemplate>
+                  <Frame>
+                        <StackLayout Orientation="Vertical">
+                     <Grid>
+                         <Grid.ColumnDefinitions>
+                             <ColumnDefinition/>
+                             <ColumnDefinition/>
+                         </Grid.ColumnDefinitions>
+                  <Label Text="{Binding name}" FontSize="Medium" />
+                  <Label Text="{Binding isEnable}" HorizontalOptions="End" Grid.Column="1" TextColor="Red" FontSize="Medium">
+                      <Label.Style>
+                          <Style TargetType="Label">
+                              <Style.Triggers>
+                                  <DataTrigger TargetType="Label" Binding="{Binding enable}" Value="true">
+                                      <Setter Property="TextColor"  Value="Green"/>
+                                  </DataTrigger>
+                              </Style.Triggers>
+                          </Style>
+                      </Label.Style>
+                  </Label>
+                     </Grid>
+
+                  <Image Source="{Binding logo}"/>
+                      <Label Text="{Binding type}" HorizontalOptions="Center" FontSize="Caption"/>
+                      
+         </StackLayout>
+                  </Frame>
+                
+             </DataTemplate>
+        </CollectionView.ItemTemplate>
+     </CollectionView>
+
+    </Grid>
+</ContentPage>

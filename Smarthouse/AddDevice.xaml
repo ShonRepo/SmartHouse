@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Smarthouse.AddDevice">
+   <ScrollView>
+       <StackLayout>
+           <Label FontSize="Medium" Text="Добавить"/>
+            <Entry x:Name="name"></Entry>
+            <Image x:Name="logo" HeightRequest="100"/>
+
+           <Picker x:Name="type" Title="Выберите тип" />
+            <Button x:Name="save" Text="Сохранить"></Button>
+       </StackLayout>
+   </ScrollView>
+</ContentPage>

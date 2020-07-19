@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Smarthouse.RegisterPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label HorizontalOptions="Center" FontSize="Large" VerticalOptions="Center">Регистрация</Label>
+        <Entry x:Name="login" Placeholder="Логин" Grid.Row="1"/>
+        <Entry x:Name="pass" Placeholder="Пароль" Grid.Row="2"/>
+        <Button x:Name="reg" Grid.Row="3" Text="Регистрация"></Button>
+
+    </Grid>
+</ContentPage>
